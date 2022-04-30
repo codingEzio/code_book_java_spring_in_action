@@ -1,5 +1,26 @@
 
 <!-- markdownlint-disable first-line-h1 -->
+### *Testing* the Project
+
+- Edit and Run
+  > Assume you are already at the root directory of your project
+
+  ```bash
+  # package and run
+  ./mvnw package
+  java -jar target/your-project-0.0.1-SNAPSHOT.jar
+
+  # run
+  ./mvnw spring-boot:run
+  ```
+
+- Test
+
+  ```bash
+  ./mvnw test
+  ```
+
+<!-- markdownlint-disable first-line-h1 -->
 ### About `@SpringBootApplication`
 
 <!-- markdownlint-disable no-inline-html -->
