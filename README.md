@@ -1,4 +1,17 @@
 
+<!-- markdownlint-disable first-line-h1 -->
+### About `@SpringBootApplication`
+
+<!-- markdownlint-disable no-inline-html -->
+| **Annotation** | **Description** |
+| :-- | :-- |
+| `@EnableAutoConfiguration` | [*Guess*](https://stackoverflow.com/a/35006877/6273859) to [configure based the `.jars` you have](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-auto-configuration.html#using-boot-auto-configuration) |
+| `@ComponentScan` | [Where to find](https://www.baeldung.com/spring-bean-annotations#scanning) the [@Component](https://www.baeldung.com/spring-component-annotation#component) *Objects* (find and register) |
+| `@Configuration` | Designate this class a **configuration** class <small>(like `manage.py` in Django)</small> |
+
+-----
+
+<!-- markdownlint-disable first-line-h1 -->
 ### My Background
 
 - I do not know much about *Java*
@@ -16,8 +29,6 @@
 | `application.properties` | Configuration [like database](https://github.com/search?q=application.properties&type=repositories) etc. |
 | `static/` | Place content like images, CSSes, scripts etc. |
 | `template/` | [Template engine](https://www.baeldung.com/spring-template-engines) files being rendered to the browsers |
-
------
 
 ### Dependencies in `pom.xml`
 
