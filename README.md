@@ -39,9 +39,8 @@
 
 - Ranting
   - It's so damn hard to find people who speak *'English'*
-    - All the documentation and tutorials ***assume*** you already knew *something*
-    - Unable to transfer the experience I got from other languages
-      > I meant the way of explaning stuff!
+  - All the documentation and tutorials ***assume*** you already knew *something*
+  - Unable to transfer the experience I got from other languages
 
 -----
 
