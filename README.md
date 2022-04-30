@@ -14,10 +14,19 @@
 <!-- markdownlint-disable first-line-h1 -->
 ### My Background
 
-- I do not know much about *Java*
-- I am not familiar with the *Java* ecosystem
-- I am not familiar with the *Spring* ecosystem
-- I have never learned anything about *Spring* before
+- Knowledge-wise
+  - I do not know much about *Java*
+  - I am not familiar with the *Java* ecosystem
+  - I am not familiar with the *Spring* ecosystem
+  - I have never learned anything about *Spring* before
+
+- Ranting
+  - It's so damn hard to find people who speak *'English'*
+    - All the documentation and tutorials ***assume*** you already knew *something*
+    - Unable to transfer the experience I got from other languages
+      > I meant the way of explaning stuff!
+
+-----
 
 ### Analyzing the Project Structure
 
