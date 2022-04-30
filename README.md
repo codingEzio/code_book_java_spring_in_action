@@ -1,5 +1,4 @@
 
-<!-- markdownlint-disable first-line-h1 -->
 ### *Testing* the Project
 
 - Edit and Run
@@ -20,10 +19,8 @@
   ./mvnw test
   ```
 
-<!-- markdownlint-disable first-line-h1 -->
 ### About `@SpringBootApplication`
 
-<!-- markdownlint-disable no-inline-html -->
 | **Annotation** | **Description** |
 | :-- | :-- |
 | `@EnableAutoConfiguration` | [*Guess*](https://stackoverflow.com/a/35006877/6273859) to [configure based the `.jars` you have](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-auto-configuration.html#using-boot-auto-configuration) |
@@ -32,7 +29,6 @@
 
 -----
 
-<!-- markdownlint-disable first-line-h1 -->
 ### My Background
 
 - Knowledge-wise
@@ -78,3 +74,18 @@
   - Smaller and cleaner build file (`pom.xml`)
   - Declaring *capabilities* instead of *library names*
   - No worry about library versions (⬅︎ `spring-boot-starter-parent`)
+
+<!-- https://github.com/DavidAnson/markdownlint/tree/v0.25.1#configuration -->
+<!-- markdownlint-configure-file
+{
+  "first-line-h1": false,
+  "hr-style": {
+    "style": "-----"
+  },
+  "no-inline-html":  {
+    "allowed_elements": [
+      "small"
+    ]
+  }
+}
+-->
