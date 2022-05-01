@@ -38,9 +38,14 @@
   - I have never learned anything about *Spring* before
 
 - Ranting
-  - It's so damn hard to find people who speak *'English'*
+  - It's <del>so damn</del> hard to find people who speak *'English'*
   - All the documentation and tutorials ***assume*** you already knew *something*
   - Unable to transfer the experience I got from other languages
+
+- Thoughts & Summaries
+  - Core logic of *Spring* is doing magic behind the scenes
+  - It is like a *frameworkless* framework
+  - It does not require you write lots of framework-specific code
 
 -----
 
@@ -83,7 +88,8 @@
   },
   "no-inline-html":  {
     "allowed_elements": [
-      "small"
+      "small",
+      "del"
     ]
   }
 }
