@@ -1,4 +1,19 @@
 
+### About *Lombok*
+
+> Reduce boilerplate code [like](https://github.com/rayanht/paprika) [dataclasses in Python](https://docs.python.org/3/library/dataclasses.html#module-contents)
+
+- It generates methods like *getters*, *setters*, `toString()`, `equals()` etc.
+- Add it to your project
+  > Install the plugin, whether it's [VS Code](https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok) or [IDEA CE](https://plugins.jetbrains.com/plugin/6317-lombok)
+
+  ```xml
+  <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+  </dependency>
+  ```
+
 ### *Testing* the Project
 
 - Edit and Run
