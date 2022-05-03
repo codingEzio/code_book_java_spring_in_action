@@ -1,4 +1,30 @@
 
+### Design the Domain
+
+> Just one more step to the database design
+
+- Gotta have the base `Taco`
+  - `name`
+  - `Ingredient`
+    - `id`
+    - `name`
+    - `type`
+- `Type` of the `Ingredient`
+  - `WRAP`
+  - `PROTEIN`
+  - `CHEESE`
+  - `VEGGIES`
+  - `SAUCE`
+- Purchasing Info `TacoOrder`
+  - `deliveryName`
+  - `deliveryStreet`
+  - `deliveryCity`
+  - `deliveryState`
+  - `deliveryZip`
+  - `ccNumber`
+  - `ccExpiration`
+  - `ccCVV`
+
 ### About *Lombok*
 
 > Reduce boilerplate code [like](https://github.com/rayanht/paprika) [dataclasses in Python](https://docs.python.org/3/library/dataclasses.html#module-contents)
