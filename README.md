@@ -1,4 +1,15 @@
 
+### About the *Model*
+
+> Don't over think it.
+
+- It's merely a concept.
+- It's **just an object** that [supplies data to the *View*](https://www.baeldung.com/spring-mvc-model-model-map-model-view#model).
+- It doesn't equal to the database interaction.
+- There's still a gap between the *Model* (conceptually ) and the *actual database operation code*
+  - If you write SQL or ORM code, database
+  - If you are not, then it's just model/view code
+
 ### About the *`DesignTacoController`*
 
 - The root class annotations
