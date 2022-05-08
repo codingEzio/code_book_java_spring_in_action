@@ -1,4 +1,16 @@
 
+### About the *`DesignTacoController`*
+
+- The root class annotations
+  - `Slf4j`: Logging
+  - `Controller`: 自`View`接請求,自處理,轉`Model`
+  - `RequestMapping`: Specify mapping without naming method
+  - `SessionAttribute`: #TODO 透徹理解再添
+- What to return when accessing */design*
+- Template variables: `taco()`, `order()`
+- Template methods: `addIngredientsToModel()`
+- Private utility methods: `filterByType()`
+
 ### Design the Domain
 
 > Just one more step to the database design
