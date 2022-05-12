@@ -15,7 +15,7 @@
 - The root class annotations
   - `Slf4j`: Logging
   - `Controller`: 自`View`接請求,自處理,轉`Model`
-  - `RequestMapping`: Specify mapping without naming method
+  - `RequestMapping`: Specify [an *parent* mapping](https://stackoverflow.com/q/22702568/6273859) for the potential *mappings* inside the class
   - `SessionAttribute`: #TODO 透徹理解再添
 - What to return when accessing */design*
 - Template variables: `taco()`, `order()`
