@@ -25,11 +25,14 @@ import com.springinaction.tacocloud.TacoOrder;
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 
+    // It's @RequestMapping with a parameter, i.e. @RequestMapping(method=GET)
+    // If the path is '/' under the parent path, there's no need for a param
     @GetMapping
     public String showDesignForm() {
         return "design";
     }
 
+    // @ModelAttribute expose objects to the web view
     @ModelAttribute(name = "taco")
     public Taco taco() {
         return new Taco();
