@@ -1,4 +1,14 @@
 
+### About the *View*
+
+- For the view libraries like *Thymeleaf*
+  - They are decoupled from particular frameworks
+  - They are not aware with Spring's model abstraction
+  - They can not work with the data places in the `Model`
+  - They **could** work with *servlet request attributes*
+  - They copy the data (from `Model`) into *request attributes*
+  - They read the data in the *request attributes* instead of the `Model`
+
 ### About the *Model*
 
 > Don't over think it.
