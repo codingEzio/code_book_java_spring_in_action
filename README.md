@@ -3,8 +3,11 @@
 
 > Don't over think it.
 
-- It's merely a concept.
-- It's **just an object** that [supplies data to the *View*](https://www.baeldung.com/spring-mvc-model-model-map-model-view#model).
+- It's *an object*
+- It [**supplies** data to the *View*](https://www.baeldung.com/spring-mvc-model-model-map-model-view#model).
+- It **ferries data** between *controller*s and *view*s
+- It would be copied into the servlet request attributes
+  > then the view could find them and use it to render a page
 - It doesn't equal to the database interaction.
 - There's still a gap between the *Model* (conceptually ) and the *actual database operation code*
   - If you write SQL or ORM code, database
