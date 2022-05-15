@@ -19,7 +19,7 @@ public class TacoOrder {
 
     // An order is dynamic
     // You could add more tacos anytime
-    private void addTaco (Taco taco) {
+    public void addTaco(Taco taco) {
         this.tacos.add(taco);
     }
 }
