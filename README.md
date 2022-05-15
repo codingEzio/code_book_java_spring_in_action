@@ -1,4 +1,40 @@
 
+### About Working with *Checkboxes* in Templates
+
+- Same story like Django, but different dialects
+
+  ```html
+  <!-- Purely for CSS selector to do the styling -->
+  <div class="ingredient-group" id="proteins">
+
+    <h3>Pick your protein:</h3>
+
+    <!-- 
+      Grab all ingredients of a specific type (Type.PROTEIN),
+      then do iterations on it (i.e. options for the checkbox)
+    -->
+    <div th:each="ingredient: ${protein}">
+
+      <!-- 
+        *{}
+          protein -> ingredients
+
+        ${}
+          protein -> ingredients .id
+          protein -> ingredients .name
+       -->
+      <input
+        type="checkbox"
+        th:field="*{ingredients}"
+        th:value="${ingredient.id}"
+      />
+      <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+      
+    </div>
+
+  </div>
+  ```
+
 ### About the *View*
 
 - For the view libraries like *Thymeleaf*
