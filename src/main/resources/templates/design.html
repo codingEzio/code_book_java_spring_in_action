@@ -9,7 +9,85 @@
     <img th:src="@{/images/TacoCloud.png}" />
 
     <form method="POST" th:object="${taco}">
-      
+      <div class="grid">
+        <div class="ingredient-group" id="wraps">
+          <h3>Design your wrap:</h3>
+
+          <!-- Derived from the addIngredientsToModel method -->
+          <div th:each="ingredient: ${wrap}">
+            <input
+              type="checkbox"
+              th:field="*{ingredients}"
+              th:value="${ingredient.id}"
+            />
+            <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+          </div>
+        </div>
+
+        <div class="ingredient-group" id="proteins">
+          <h3>Pick your protein:</h3>
+
+          <!-- Derived from the addIngredientsToModel method -->
+          <div th:each="ingredient: ${protein}">
+            <input
+              type="checkbox"
+              th:field="*{ingredients}"
+              th:value="${ingredient.id}"
+            />
+            <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+          </div>
+        </div>
+
+        <div class="ingredient-group" id="cheeses">
+          <h3>Choose your cheese:</h3>
+
+          <!-- Derived from the addIngredientsToModel method -->
+          <div th:each="ingredient: ${cheese}">
+            <input
+              type="checkbox"
+              th:field="*{ingredients}"
+              th:value="${ingredient.id}"
+            />
+            <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+          </div>
+        </div>
+
+        <div class="ingredient-group" id="veggies">
+          <h3>Choose your cheese:</h3>
+
+          <!-- Derived from the addIngredientsToModel method -->
+          <div th:each="ingredient: ${veggies}">
+            <input
+              type="checkbox"
+              th:field="*{ingredients}"
+              th:value="${ingredient.id}"
+            />
+            <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+          </div>
+        </div>
+
+        <div class="ingredient-group" id="sauces">
+          <h3>Choose your cheese:</h3>
+
+          <!-- Derived from the addIngredientsToModel method -->
+          <div th:each="ingredient: ${sauce}">
+            <input
+              type="checkbox"
+              th:field="*{ingredients}"
+              th:value="${ingredient.id}"
+            />
+            <span th:text="${ingredient.name}">INGREDIENT</span> <br />
+          </div>
+        </div>
+
+        <div>
+          <h3>Name your taco creation:</h3>
+          <input type="text" th:field="*{name}" />
+          <br />
+
+          <button>Submit Your Taco</button>
+        </div>
+      </div>
     </form>
   </body>
 </html>
