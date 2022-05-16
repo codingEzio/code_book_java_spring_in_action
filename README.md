@@ -112,7 +112,9 @@
   </dependency>
   ```
 
-### *Testing* the Project
+### Most Used Commands
+
+> e.g. command `mvn`, script `.mvnw`
 
 - Edit and Run
   > Assume you are already at the root directory of your project
@@ -130,6 +132,12 @@
 
   ```bash
   ./mvnw test
+  ```
+
+- Clean Up the Built Files
+
+  ```bash
+  mvn clean
   ```
 
 ### About `@SpringBootApplication`
