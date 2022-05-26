@@ -32,6 +32,15 @@ public class DesignTacoController {
         return "design";
     }
 
+    @PostMapping
+    public String processTaco(Taco taco, @ModelAttribute TacoOrder tacoOrder) {
+        tacoOrder.addTaco(taco);
+        log.info("[1] Processing taco     : {}", taco);
+        log.info("[2] Processing tacoOrder: {}", tacoOrder);
+
+        return "redirect:/orders/current";
+    }
+
     // @ModelAttribute expose objects to the web view
     @ModelAttribute(name = "taco")
     public Taco taco() {
@@ -49,7 +58,7 @@ public class DesignTacoController {
                 new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
                 new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
                 new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
-                new Ingredient("CARN",  "Carnitas", Type.PROTEIN),
+                new Ingredient("CARN", "Carnitas", Type.PROTEIN),
                 new Ingredient("TMTO", "Diced Tomatoes", Type.VEGGIES),
                 new Ingredient("LETC", "Lettuce", Type.VEGGIES),
                 new Ingredient("CHED", "Cheddar", Type.CHEESE),
