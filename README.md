@@ -1,4 +1,17 @@
 
+### About How Do Spring Find the Templates
+
+- The [returned string will be used to resolve](https://stackoverflow.com/a/54619725/6273859) the template file
+
+  ```java
+  public class OrderController {
+      @GetMapping("/current")
+      public String orderForm() {
+          return "orderForm"; // => orderForm.html
+      } 
+  } 
+  ```
+
 ### About Working with *Checkboxes* in Templates
 
 - Same story like Django, but different dialects
