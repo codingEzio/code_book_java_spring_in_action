@@ -21,4 +21,13 @@ public class OrderController {
     public String orderForm() {
         return "orderForm";
     }
+
+    @PostMapping
+    public String processOrder(TacoOrder order, SessionStatus sessionStatus) {
+        log.info("Order submitted: {}", order);
+
+        sessionStatus.setComplete();
+
+        return "redirect:/";
+    }
 }
