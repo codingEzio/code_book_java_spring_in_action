@@ -1,4 +1,11 @@
 
+### Apply Validation in Spring MVC
+
+1. Add the Spring Validation starter to the `pom.xml`
+2. Declare rules on the class that is to be validated (`Taco`)
+3. Specify the controller that require validation (`processTaco`, `processOrder`)
+4. Modify the views to display validation errors
+
 ### About How Do Spring Find the Templates
 
 - The [returned string will be used to resolve](https://stackoverflow.com/a/54619725/6273859) the template file
