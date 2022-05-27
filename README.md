@@ -2,7 +2,7 @@
 ### Apply Validation in Spring MVC
 
 1. Add the Spring Validation starter to the `pom.xml`
-2. Declare rules on the class that is to be validated (`Taco`)
+2. Declare rules on the class that is to be validated (`Taco`, `TacoOrder`)
 3. Specify the controller that require validation (`processTaco`, `processOrder`)
 4. Modify the views to display validation errors
 
