@@ -1,4 +1,22 @@
 
+### If Your Page Is Quite Simple
+- Before: *one route* -> *one controller file* plus the template file
+```java
+public class HomeController {
+    @GetMapping("/")
+    public String home() {
+        return "home";
+    }
+}
+```
+- Now: *routes* <-> *lines* in *one file*
+```java
+public void addViewControllers(ViewControllerRegistry registry) {
+    registry.addViewController("/").setViewName("home");
+    registry.addViewController("/about").setViewName("aboutus");
+}
+```
+
 ### Apply Validation in Spring MVC
 
 1. Add the Spring Validation starter to the `pom.xml`
