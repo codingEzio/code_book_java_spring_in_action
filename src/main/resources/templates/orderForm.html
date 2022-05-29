@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Taco Cloud</title>
     <link rel="stylesheet" th:href="@{/styles.css}" />
+    <link rel="stylesheet" th:href="@{/bulma.min.css}" />
   </head>
   <body>
     <form method="POST" th:action="@{/orders}" th:object="${tacoOrder}">
-      <h1>Order your taco creations!</h1>
+      <h1 class="title is-1">Order your taco creations!</h1>
 
       <img th:src="@{/images/TacoCloud.png}" />
 
-      <h3>Your tacos in this order:</h3>
+      <h3 class="title is-3">Your tacos in this order:</h3>
       <a th:href="@{/design}" id="another">Design another taco</a>
-
-      <br />
 
       <ul>
         <li th:each="taco : ${tacoOrder.tacos}">
@@ -21,27 +21,27 @@
         </li>
       </ul>
 
-      <h3>Delier my taco masterpieces to...</h3>
+      <h3 class="title is-3">Delier my taco masterpieces to...</h3>
 
       <label for="deliveryName">Name: </label>
-      <input type="text" th:field="*{deliveryName}" />
+      <input class="input is-normal" type="text" th:field="*{deliveryName}" />
 
       <label for="deliveryStreet">Street: </label>
-      <input type="text" th:field="*{deliveryStreet}" />
+      <input class="input is-normal" type="text" th:field="*{deliveryStreet}" />
 
       <label for="deliveryCity">City: </label>
-      <input type="text" th:field="*{deliveryCity}" />
+      <input class="input is-normal" type="text" th:field="*{deliveryCity}" />
 
       <label for="deliveryState">State: </label>
-      <input type="text" th:field="*{deliveryState}" />
+      <input class="input is-normal" type="text" th:field="*{deliveryState}" />
 
       <label for="deliveryZip">Zip code: </label>
-      <input type="text" th:field="*{deliveryZip}" />
+      <input class="input is-normal" type="text" th:field="*{deliveryZip}" />
 
-      <h3>Here's how I'll pay...</h3>
+      <h3 class="title is-3">Here's how I'll pay...</h3>
 
       <label for="ccNumber">Credit Card #: </label>
-      <input type="text" th:field="*{ccNumber}" />
+      <input class="input is-normal" type="text" th:field="*{ccNumber}" />
       <span
         class="validationError"
         th:if="${#fields.hasErrors('ccNumber')}"
@@ -51,13 +51,12 @@
       </span>
 
       <label for="ccExpiration">Expiration: </label>
-      <input type="text" th:field="*{ccExpiration}" />
+      <input class="input is-normal" type="text" th:field="*{ccExpiration}" />
 
       <label for="ccCVV">CVV: </label>
-      <input type="text" th:field="*{ccCVV}" />
-      <br />
+      <input class="input is-normal" type="text" th:field="*{ccCVV}" />
 
-      <input type="submit" value="Submit Order" />
+      <input class="button" type="submit" value="Submit Order" />
     </form>
   </body>
 </html>
