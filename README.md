@@ -1,4 +1,12 @@
 
+### Disable Template Caching
+
+- Add these to `application.properties`
+```bash
+spring.thymeleaf.cache=false
+spring.thymeleaf.prefix=file:src/main/resources/templates/
+```
+
 ### If Your Page Is Quite Simple
 - Before: *one route* -> *one controller file* plus the template file
 ```java
