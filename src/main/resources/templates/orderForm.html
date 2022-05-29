@@ -42,6 +42,13 @@
 
       <label for="ccNumber">Credit Card #: </label>
       <input type="text" th:field="*{ccNumber}" />
+      <span
+        class="validationError"
+        th:if="${#fields.hasErrors('ccNumber')}"
+        th:errors="*{ccNumber}"
+      >
+        CC Num Error
+      </span>
 
       <label for="ccExpiration">Expiration: </label>
       <input type="text" th:field="*{ccExpiration}" />
