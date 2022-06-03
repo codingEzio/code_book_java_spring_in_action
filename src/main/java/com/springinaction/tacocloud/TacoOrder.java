@@ -12,6 +12,12 @@ import lombok.Data;
 @Data
 public class TacoOrder {
 
+    private static final Long serialVersionUID = 1L;
+
+    private Long id;
+    
+    private Date placedAt;
+
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
 
