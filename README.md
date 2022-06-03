@@ -2,13 +2,16 @@
 ### Disable Template Caching
 
 - Add these to `application.properties`
+
 ```bash
 spring.thymeleaf.cache=false
 spring.thymeleaf.prefix=file:src/main/resources/templates/
 ```
 
 ### If Your Page Is Quite Simple
+
 - Before: *one route* -> *one controller file* plus the template file
+
 ```java
 public class HomeController {
     @GetMapping("/")
@@ -17,7 +20,9 @@ public class HomeController {
     }
 }
 ```
+
 - Now: *routes* <-> *lines* in *one file*
+
 ```java
 public void addViewControllers(ViewControllerRegistry registry) {
     registry.addViewController("/").setViewName("home");
