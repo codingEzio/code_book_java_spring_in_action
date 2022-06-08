@@ -20,4 +20,13 @@ public class IngredientRepositoryImplJdbc implements IngredientRepository {
     public IngredientRepositoryImplJdbc(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
+    private Ingredient mapRowToIngredient(ResultSet row, int rowNum) throws SQLException {
+        // So basically it converts data returned from database into an object
+        // that could be used in the view template (for Thymeleaf in this case).
+        return new Ingredient(
+                row.getString("id"),
+                row.getString("name"),
+                Ingredient.Type.valueOf(row.getString("type")));
+    }
 }
