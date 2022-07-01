@@ -1,4 +1,11 @@
 
+### Writing Database Operations for `Orders`
+
+- Files to add
+  1. ```OrderRepository```: Interface for database operations
+  2. ```IngredientRef```: Link `Taco` and `Ingredient` together
+  3. ```OrderRepositoryJdbc```: Implementation for the `Order` interface
+
 ### If Your App couldn't Run (till page 73)
 
 - It's because the author did not state the changes explicitly
@@ -16,7 +23,6 @@ return StreamSupport.stream(ingredients.spliterator(), false)
         .filter(i -> i.getType().equals(type))
         .collect(Collectors.toList());
 ```
-
 
 ### Disable Template Caching
 
