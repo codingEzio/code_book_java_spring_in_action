@@ -3,9 +3,13 @@ package com.springinaction.tacocloud.web;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 import javax.validation.Valid;
 
 import com.springinaction.tacocloud.data.IngredientRepository;
+
+import org.apache.tomcat.util.http.fileupload.util.Streams;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +34,7 @@ public class DesignTacoController {
 
     private final IngredientRepository ingredientRepo;
 
-    public DesignTacoController (IngredientRepository ingredientRepo) {
+    public DesignTacoController(IngredientRepository ingredientRepo) {
         this.ingredientRepo = ingredientRepo;
     }
 
@@ -83,10 +87,9 @@ public class DesignTacoController {
     }
 
     private Iterable<Ingredient> filterByType(
-            List<Ingredient> ingredients, Type type) {
-        return ingredients
-                .stream()
-                .filter(x -> x.getType().equals(type))
+            Iterable<Ingredient> ingredients, Type type) {
+        return StreamSupport.stream(ingredients.spliterator(), false)
+                .filter(i -> i.getType().equals(type))
                 .collect(Collectors.toList());
     }
 }
