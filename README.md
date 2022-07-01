@@ -1,4 +1,23 @@
 
+### If Your App couldn't Run (till page 73)
+
+- It's because the author did not state the changes explicitly
+
+- Core changes to make ([`Ingredient.java`](https://github.com/habuma/spring-in-action-6-samples/blob/33acc6497f9a98a3ba8dfe980fd00b87ce0dee5b/ch03/tacos-jdbctemplate/src/main/java/tacos/Ingredient.java#L9) and [`DesignTacoController.java`](https://github.com/habuma/spring-in-action-6-samples/blob/33acc6497f9a98a3ba8dfe980fd00b87ce0dee5b/ch03/tacos-jdbctemplate/src/main/java/tacos/web/DesignTacoController.java#L78))
+
+```java
+// Ingredient.java
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+
+
+// DesignTacoController.java
+return StreamSupport.stream(ingredients.spliterator(), false)
+        .filter(i -> i.getType().equals(type))
+        .collect(Collectors.toList());
+```
+
+
 ### Disable Template Caching
 
 - Add these to `application.properties`
