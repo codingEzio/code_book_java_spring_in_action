@@ -64,6 +64,8 @@ public class OrderRepositoryImplJdbc implements OrderRepository {
         for (Taco taco : tacos) {
             saveTaco(orderId, i++, taco);
         }
+
+        return order;
     }
 
     public long saveTaco(Long orderId, int orderKey, Taco taco) {
