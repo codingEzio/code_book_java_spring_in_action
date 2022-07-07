@@ -1,4 +1,4 @@
-package com.springinaction.tacocloud.data;
+package com.springinaction.tacocloud;
 
 import lombok.Data;
 
