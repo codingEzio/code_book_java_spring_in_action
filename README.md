@@ -6,6 +6,12 @@
   2. ```IngredientRef```: Link `Taco` and `Ingredient` together
   3. ```OrderRepositoryJdbc```: Implementation for the `Order` interface
 
+### How Would You Save an `TacoOrder`?
+
+1. It seems like you only need a `save()`, actually you need
+2. to save `Taco`
+3. to save the relationship between `Taco` and `Ingredient` (ref)
+
 ### If Your App couldn't Run (till page 73)
 
 - It's because the author did not state the changes explicitly
