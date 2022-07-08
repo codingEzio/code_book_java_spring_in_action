@@ -7,11 +7,16 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
 import lombok.Data;
 
 @Data
+@Table
 public class Taco {
 
+    @Id
     private Long id;
     
     private Date createdAt = new Date();
