@@ -1,4 +1,35 @@
 
+### Switch to JDBC that powered by *Spring Data*
+
+1. `pom.xml`
+
+    ```xml
+    <!-- Change to this -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jdbc</artifactId>
+    </dependency>
+    ```
+
+2. Changing *Object*`Repository`
+
+    ```java
+    // Old :: an interface with methods to implement
+    Iterable<Ingredient> findAll();
+    Optional<Ingredient> findById(String id);
+    Ingredient save(Ingredient ingredient);
+
+
+    // New :: 'extends' alone suffices, removed the methods'
+    ... extends CrudRepository<Ingredient, String> { .. }
+    ```
+
+3. Adding annotations to the objects for Spring Data
+    > Besides `id`, the other objects were ***implicitly*** being mapped
+    - `TacoOrder.java`
+    - `Ingredient.java`
+    - `Taco.java`
+
 ### Writing Database Operations for `Orders`
 
 - Files to add
