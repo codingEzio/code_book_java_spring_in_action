@@ -1,3 +1,34 @@
+### Switch from *Spring Data JDBC* to *JPA*
+
+> *JPA*: *J*ava *P*ersistence *A*PI
+
+1. `pom.xml`
+
+    ```xml
+    <!-- Change to this -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    ```
+
+2. Changing annotations from Spring Data *JDBC* to *JPA*
+
+    ```java
+    // Common annotations to use 
+    @Entity
+    @Id
+   
+    // Class to add upon
+    public class Ingredient {  }
+    public class Taco {  }
+    public class TacoOrder {  }
+   
+    // Another some other complex annotations
+    ```
+
+3. Pre-loading data using `CommandLineRunner` in `TacoCloudApplication.java`   
+
 
 ### Switch to JDBC that powered by *Spring Data*
 
