@@ -1,4 +1,83 @@
 
+### Switch to NoSQL - Cassandra
+
+1. `pom.xml`
+    - Add dependency
+
+        ```xml
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-cassandra</artifactId>
+        </dependency>
+        ```
+
+    - Remove old DB-related dependency
+
+        ```xml
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+            <artifactId>spring-boot-starter-data-cassandra</artifactId>
+        </dependency>
+        ```
+
+2. Get *Docker* on your machine first (whether by GUI or package manager)
+3. Get *Cassandra*
+
+    ```bash
+    docker network create cassandra-taco
+    docker network ls
+
+    # Build a container based on the image 'cassandra' (latest version)
+    # and name it 'cassandra-taco', run it at background (shell detached)
+    # yet exposing and mapping the ports to the host (macOS). Also, we'd
+    # use the network we just created.
+    docker run --name    cassandra-taco \
+               --network cassandra-taco \
+               --publish 9042:9042      \
+               --detach                 \
+               cassandra:latest
+   
+    docker container ls           # list of containers and their status
+    docker container stop CONT_ID # if you wanna re-create one
+    ```
+
+4. Configure *Cassandra*
+
+    ```bash
+    # Run a container based the image 'cassandra' we downloaded (which is
+    # also the latest version, but we don't need the :latest this time),
+    # and connect to the cassandra server we've runned (detached to the
+    # background) that is in the same network named 'cassandra-taco'.
+    # Also, this time we run this container in the '-it' way, the way
+    # we could interactive with it (plus the 'cqlsh', we're directly
+    # being put in the Cassandra shell). Last thing, the '--rm' means
+    # this container would be automatically removed once we exited it,
+    # if you want an another try-out of cqlsh, just create another one.
+    docker run --interactive --tty      \
+               --network cassandra-taco \
+               --rm                     \
+               cassandra                \
+               cqlsh cassandra-taco     
+    ```
+
+    ```bash
+    >cqlsh -- the line-feed we created won't work in the shell
+    >cqlsh -- so make sure you combined this into a single line before copying
+    >cqlsh CREATE KEYSPACE tacocloud
+        WITH replication={'class': 'SimpleStrategy', 'replication_factor:1}
+        AND durable_writes=true;
+    ```
+
+5. Configure *Spring*
+
+    ```bash
+    spring.data.cassandra.keyspace-name=taco_cloud
+    spring.data.cassandra.schema-action=recreate
+    spring.data.cassandra.local-datacenter=datacenter1
+    ```
+
 ### Switch to JDBC that powered by *Spring Data*
 
 1. `pom.xml`
