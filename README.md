@@ -1,4 +1,12 @@
 
+### What *Cassandra* differs from the relational database
+
+- Columns: *yes*, Rows: *not necessarily*
+    > We got data types prepared, but the data is *optional*
+- Databases are splited across multiple partitions instead of one single place
+- Data duplication are common in order to optimize for *reading*
+    > Denormalization is the new *normal* (duplication across multiple tables)
+
 ### Switch to NoSQL - Cassandra
 
 1. `pom.xml`
