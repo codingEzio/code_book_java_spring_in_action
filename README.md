@@ -63,11 +63,11 @@
     ```
 
     ```bash
-    >cqlsh -- the line-feed we created won't work in the shell
-    >cqlsh -- so make sure you combined this into a single line before copying
-    >cqlsh CREATE KEYSPACE tacocloud
-        WITH replication={'class': 'SimpleStrategy', 'replication_factor:1}
-        AND durable_writes=true;
+    # These commands were executed in the 'cqlsh' shell
+    # Make sure you combine this into one single line before copy-n-paste
+    CREATE KEYSPACE tacocloud
+        WITH replication = {'class': 'SimpleStrategy', 'replication_factor: 1}
+        AND durable_writes = true;
     ```
 
 5. Configure *Spring*
