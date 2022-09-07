@@ -1,4 +1,5 @@
 
+
 ### What *Cassandra* differs from the relational database
 
 - Columns: *yes*, Rows: *not necessarily*
